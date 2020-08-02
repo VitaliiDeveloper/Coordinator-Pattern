@@ -1,0 +1,7 @@
+[[General]]
+  [search]
+    ru = Поиск
+    en = Search
+  [i_want_to]
+    ru = Хочу найти...
+    en = Wanna find...
