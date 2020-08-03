@@ -7,7 +7,7 @@
 This Repository it's example Simple and Easy Task - ( Coordinator + MVC )
 
 #### How to load this project?
-First step it's install twine for multi languages application. Of cource you can use **iString** but this app in progress of updating for **YOU Guys**.
+First step it's install **twine** and **python3** for multi languages application. Of cource you can use **iString** but this app in progress of updating for **YOU Guys**.
 
 #### How to install Twine?
 
