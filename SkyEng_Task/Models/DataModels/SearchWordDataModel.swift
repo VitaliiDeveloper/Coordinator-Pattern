@@ -11,5 +11,5 @@ import Foundation
 struct SearchWordDataModel:Codable {
   let id:Int
   let text:String
-  let meanings:[MeaningsWordDataModel]?
+  let meanings:[MeaningsWordDataModel<Int>]?
 }

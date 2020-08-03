@@ -17,8 +17,26 @@ final class SearchWordsCoordinator: BaseCoordinator {
     self.loadSearchWordsViewController()
   }
   
-  func loadSearchWordsViewController() {
+  private func loadSearchWordsViewController() {
     let controller = SearchWordsViewController()
+    controller.delegate = self
+    
     navigationController.pushViewController(controller, from: self, animated: true)
+  }
+  
+  func loadWordDetailCoordinator(id:Int) {
+    let coordinator = WordDetailCoordinator()
+    
+    self.applicationCoordinator.add(coordinator: coordinator)
+    
+    coordinator.openWordDetailViewController(wordID: id)
+  }
+}
+
+//MARK: - SearchWordsViewControllerDelegate
+extension SearchWordsCoordinator: SearchWordsViewControllerDelegate {
+  func searchWordsViewController(_ viewController: SearchWordsViewController,
+                                 didSelectAttributes: SearchWordTableViewCellAttributes) {
+    self.loadWordDetailCoordinator(id: didSelectAttributes.id)
   }
 }

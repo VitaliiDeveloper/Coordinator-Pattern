@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol SearchWordsViewControllerDelegate:AnyObject {
+  func searchWordsViewController(_ viewController:SearchWordsViewController, didSelectAttributes:SearchWordTableViewCellAttributes)
+}
+
 final class SearchWordsViewController: BaseViewController {
+  weak var delegate:SearchWordsViewControllerDelegate?
+  
   var timer = Timer()
   
   let searchController = UISearchController(searchResultsController: nil)
@@ -23,6 +29,8 @@ final class SearchWordsViewController: BaseViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    contentView.delegate = self
     
     self.setupSearchController()
   }
@@ -61,6 +69,14 @@ final class SearchWordsViewController: BaseViewController {
   
   override var preferredStatusBarStyle: UIStatusBarStyle {
     return .darkContent
+  }
+}
+
+//MARK: - SearchWordsViewDelegate
+extension SearchWordsViewController: SearchWordsViewDelegate {
+  func searchWordsView(_ view: SearchWordsView,
+                       didSelectAttributes: SearchWordTableViewCellAttributes) {
+    delegate?.searchWordsViewController(self, didSelectAttributes: didSelectAttributes)
   }
 }
 

@@ -36,6 +36,12 @@
 		D3B052E124D749F1009D899E /* TableViewCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B052E024D749F1009D899E /* TableViewCellDataSource.swift */; };
 		D3B052E424D755BB009D899E /* TitledTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B052E324D755BB009D899E /* TitledTableViewHeader.swift */; };
 		D3B052E624D755C6009D899E /* TitledTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3B052E524D755C6009D899E /* TitledTableViewHeader.xib */; };
+		D3B052E924D817BF009D899E /* WordDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B052E824D817BF009D899E /* WordDetailCoordinator.swift */; };
+		D3B052EC24D817F7009D899E /* WordDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B052EB24D817F7009D899E /* WordDetailViewController.swift */; };
+		D3B052EE24D81810009D899E /* WordDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B052ED24D81810009D899E /* WordDetailView.swift */; };
+		D3B052F124D82A4A009D899E /* WordDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3B052F024D82A4A009D899E /* WordDetailTableViewCell.xib */; };
+		D3B052F324D82C46009D899E /* WordDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B052F224D82C46009D899E /* WordDetailTableViewCell.swift */; };
+		D3B052F524D82C7A009D899E /* WordDetailTableViewCellAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B052F424D82C7A009D899E /* WordDetailTableViewCellAttributes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +77,12 @@
 		D3B052E024D749F1009D899E /* TableViewCellDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellDataSource.swift; sourceTree = "<group>"; };
 		D3B052E324D755BB009D899E /* TitledTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitledTableViewHeader.swift; sourceTree = "<group>"; };
 		D3B052E524D755C6009D899E /* TitledTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitledTableViewHeader.xib; sourceTree = "<group>"; };
+		D3B052E824D817BF009D899E /* WordDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDetailCoordinator.swift; sourceTree = "<group>"; };
+		D3B052EB24D817F7009D899E /* WordDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDetailViewController.swift; sourceTree = "<group>"; };
+		D3B052ED24D81810009D899E /* WordDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDetailView.swift; sourceTree = "<group>"; };
+		D3B052F024D82A4A009D899E /* WordDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordDetailTableViewCell.xib; sourceTree = "<group>"; };
+		D3B052F224D82C46009D899E /* WordDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDetailTableViewCell.swift; sourceTree = "<group>"; };
+		D3B052F424D82C7A009D899E /* WordDetailTableViewCellAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDetailTableViewCellAttributes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +135,7 @@
 		D3B0529C24D6BC75009D899E /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				D3B052E724D8176B009D899E /* WordDetailCoordinator */,
 				D3B052AD24D6BE5E009D899E /* SearchWordsCoordinator */,
 				D3B052A824D6BD26009D899E /* BaseCoordinator */,
 				D3B0529E24D6BC94009D899E /* ApplicationCoordinator.swift */,
@@ -133,6 +146,7 @@
 		D3B052A024D6BCA8009D899E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D3B052EA24D817EC009D899E /* WordDetailViewController */,
 				D3B052B024D6BF56009D899E /* SearchWordsViewController */,
 				D3B052A524D6BCD9009D899E /* VLNavigationController */,
 				D3B052A424D6BCD3009D899E /* BaseViewController */,
@@ -255,9 +269,10 @@
 		D3B052D824D743C2009D899E /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				D3B052D924D743D0009D899E /* SearchWordTableViewCell */,
+				D3B052EF24D82A38009D899E /* WordDetailTableViewCell */,
 				D3B052E224D75558009D899E /* TitledTableViewHeader */,
 				D3B052E024D749F1009D899E /* TableViewCellDataSource.swift */,
-				D3B052D924D743D0009D899E /* SearchWordTableViewCell */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -279,6 +294,33 @@
 				D3B052E524D755C6009D899E /* TitledTableViewHeader.xib */,
 			);
 			path = TitledTableViewHeader;
+			sourceTree = "<group>";
+		};
+		D3B052E724D8176B009D899E /* WordDetailCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				D3B052E824D817BF009D899E /* WordDetailCoordinator.swift */,
+			);
+			path = WordDetailCoordinator;
+			sourceTree = "<group>";
+		};
+		D3B052EA24D817EC009D899E /* WordDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D3B052EB24D817F7009D899E /* WordDetailViewController.swift */,
+				D3B052ED24D81810009D899E /* WordDetailView.swift */,
+			);
+			path = WordDetailViewController;
+			sourceTree = "<group>";
+		};
+		D3B052EF24D82A38009D899E /* WordDetailTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				D3B052F024D82A4A009D899E /* WordDetailTableViewCell.xib */,
+				D3B052F224D82C46009D899E /* WordDetailTableViewCell.swift */,
+				D3B052F424D82C7A009D899E /* WordDetailTableViewCellAttributes.swift */,
+			);
+			path = WordDetailTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,6 +389,7 @@
 				D3B052B924D6C47E009D899E /* twine.sh in Resources */,
 				D3B052E624D755C6009D899E /* TitledTableViewHeader.xib in Resources */,
 				D3B052DB24D74405009D899E /* SearchWordTableViewCell.xib in Resources */,
+				D3B052F124D82A4A009D899E /* WordDetailTableViewCell.xib in Resources */,
 				D3B0529224D6AE15009D899E /* Assets.xcassets in Resources */,
 				D3B052CC24D6C811009D899E /* strings.txt in Resources */,
 			);
@@ -389,20 +432,25 @@
 				D3B052A724D6BCED009D899E /* VLNavigationController.swift in Sources */,
 				D3B0528D24D6AE13009D899E /* ViewController.swift in Sources */,
 				D3B052D324D71011009D899E /* SearchWordDataModel.swift in Sources */,
+				D3B052F524D82C7A009D899E /* WordDetailTableViewCellAttributes.swift in Sources */,
 				D3B052AF24D6BEA9009D899E /* SearchWordsCoordinator.swift in Sources */,
 				D3B0528924D6AE13009D899E /* AppDelegate.swift in Sources */,
+				D3B052EE24D81810009D899E /* WordDetailView.swift in Sources */,
 				D3B052AA24D6BD2D009D899E /* BaseCoordinator.swift in Sources */,
 				D3B0528B24D6AE13009D899E /* SceneDelegate.swift in Sources */,
 				D3B052C324D6C652009D899E /* LocalizationKeys.swift in Sources */,
 				D3B052CF24D70DC1009D899E /* NetworkManager.swift in Sources */,
 				D3B052B424D6BF6B009D899E /* SearchWordsView.swift in Sources */,
 				D3B052E124D749F1009D899E /* TableViewCellDataSource.swift in Sources */,
+				D3B052EC24D817F7009D899E /* WordDetailViewController.swift in Sources */,
 				D3B052E424D755BB009D899E /* TitledTableViewHeader.swift in Sources */,
 				D3B052D724D710FA009D899E /* TranslationWordDataModel.swift in Sources */,
+				D3B052E924D817BF009D899E /* WordDetailCoordinator.swift in Sources */,
 				D3B0529F24D6BC94009D899E /* ApplicationCoordinator.swift in Sources */,
 				D3B052DD24D7465C009D899E /* SearchWordTableViewCell.swift in Sources */,
 				D3B052AC24D6BD5B009D899E /* BaseView.swift in Sources */,
 				D3B052D524D71063009D899E /* MeaningsWordDataModel.swift in Sources */,
+				D3B052F324D82C46009D899E /* WordDetailTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

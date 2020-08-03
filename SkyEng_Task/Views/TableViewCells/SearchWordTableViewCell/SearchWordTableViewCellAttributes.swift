@@ -9,7 +9,7 @@
 import Foundation
 
 final class SearchWordTableViewCellAttributes {
-  var id:Int?
+  var id:Int!
   
   var index: Int = 0
   var translatedWord: String = ""

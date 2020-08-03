@@ -12,7 +12,8 @@ final class NetworkManager:NSObject, URLSessionDataDelegate {
   static let main = NetworkManager()
   
   enum NetworkManagerKeys:String {
-    case wordMeaningSearch = "/api/public/v1/words/search"
+    case wordSearch = "/api/public/v1/words/search"
+    case wordMeaning = "/api/public/v1/meanings"
   }
   
   lazy var session = URLSession(configuration: .default, delegate: self, delegateQueue: nil)
@@ -28,18 +29,31 @@ final class NetworkManager:NSObject, URLSessionDataDelegate {
   }
   
   
-  ///Be careful with completion block. Use [weak self] to be sure that retain cycle wasn't be
   func search(word:String, complited:@escaping (([SearchWordDataModel]?)->())) {
     var urlComponents = URLComponents()
     urlComponents.scheme = self.scheme
     urlComponents.host = self.host
-    urlComponents.path = NetworkManagerKeys.wordMeaningSearch.rawValue
+    urlComponents.path = NetworkManagerKeys.wordSearch.rawValue
     urlComponents.queryItems = [
       URLQueryItem(name: "search", value: word)
     ]
     
     session.dataTask(with: urlComponents.url!) { (data, response, error) in
       complited(self.createModel(model: [SearchWordDataModel].self, data: data ?? Data()))
+    }.resume()
+  }
+  
+  func wordMeaning(by id:Int, complited:@escaping (([MeaningsWordDataModel<String>]?)->())) {
+    var urlComponents = URLComponents()
+    urlComponents.scheme = self.scheme
+    urlComponents.host = self.host
+    urlComponents.path = NetworkManagerKeys.wordMeaning.rawValue
+    urlComponents.queryItems = [
+      URLQueryItem(name: "ids", value: id.description)
+    ]
+    
+    session.dataTask(with: urlComponents.url!) { (data, response, error) in
+      complited(self.createModel(model: [MeaningsWordDataModel<String>].self, data: data ?? Data()))
     }.resume()
   }
   

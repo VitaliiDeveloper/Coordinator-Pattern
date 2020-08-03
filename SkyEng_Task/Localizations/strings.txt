@@ -11,3 +11,6 @@
   [ok]
     ru = OK
     en = OK
+  [meaning]
+    ru = Значения
+    en = Meaning

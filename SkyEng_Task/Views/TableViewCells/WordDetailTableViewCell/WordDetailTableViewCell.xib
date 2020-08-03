@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="165" id="xsX-qx-yPn" customClass="WordDetailTableViewCell" customModule="SkyEng_Task" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="165"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xsX-qx-yPn" id="BbA-DT-BKE">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="165"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1gS-HL-YWE">
+                        <rect key="frame" x="14" y="21" width="120" height="120"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="rrT-KY-m7Z"/>
+                            <constraint firstAttribute="height" constant="120" id="sLY-h8-McX"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Небо" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQI-d6-4UX">
+                        <rect key="frame" x="142" y="21" width="252" height="20.5"/>
+                        <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Небо" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOV-NL-aih">
+                        <rect key="frame" x="142" y="45.5" width="252" height="14"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" text="Test Text" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfO-Hg-Fic">
+                        <rect key="frame" x="142" y="60.5" width="252" height="83.5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="WQI-d6-4UX" firstAttribute="top" secondItem="BbA-DT-BKE" secondAttribute="top" constant="21" id="1cg-nA-hEF"/>
+                    <constraint firstItem="rOV-NL-aih" firstAttribute="top" secondItem="WQI-d6-4UX" secondAttribute="bottom" constant="4" id="2iT-1D-k0C"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="sfO-Hg-Fic" secondAttribute="bottom" constant="10" id="BR2-eP-AWz"/>
+                    <constraint firstItem="1gS-HL-YWE" firstAttribute="top" secondItem="BbA-DT-BKE" secondAttribute="top" constant="21" id="C3I-Br-XZ6"/>
+                    <constraint firstItem="sfO-Hg-Fic" firstAttribute="top" secondItem="WQI-d6-4UX" secondAttribute="bottom" priority="750" constant="1" id="F6i-3t-bF8"/>
+                    <constraint firstItem="sfO-Hg-Fic" firstAttribute="top" secondItem="rOV-NL-aih" secondAttribute="bottom" constant="1" id="FZN-cy-KWh"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="1gS-HL-YWE" secondAttribute="bottom" constant="24" id="N7d-Kj-BKS"/>
+                    <constraint firstItem="1gS-HL-YWE" firstAttribute="leading" secondItem="BbA-DT-BKE" secondAttribute="leading" constant="14" id="Rqt-yE-Nqb"/>
+                    <constraint firstItem="rOV-NL-aih" firstAttribute="leading" secondItem="1gS-HL-YWE" secondAttribute="trailing" constant="8" id="czD-QU-82J"/>
+                    <constraint firstAttribute="trailing" secondItem="WQI-d6-4UX" secondAttribute="trailing" constant="20" id="ejD-Mp-d6X"/>
+                    <constraint firstItem="WQI-d6-4UX" firstAttribute="leading" secondItem="1gS-HL-YWE" secondAttribute="trailing" constant="8" id="epa-yH-kbA"/>
+                    <constraint firstItem="sfO-Hg-Fic" firstAttribute="trailing" secondItem="BbA-DT-BKE" secondAttribute="trailingMargin" id="oye-WU-WDM"/>
+                    <constraint firstAttribute="trailing" secondItem="rOV-NL-aih" secondAttribute="trailing" constant="20" id="q5L-vW-j3v"/>
+                    <constraint firstItem="sfO-Hg-Fic" firstAttribute="leading" secondItem="1gS-HL-YWE" secondAttribute="trailing" constant="8" id="qPk-JB-v5R"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="definitionTextView" destination="sfO-Hg-Fic" id="TFx-fA-Tuq"/>
+                <outlet property="noteLabel" destination="rOV-NL-aih" id="OMH-n4-tGc"/>
+                <outlet property="wordImageView" destination="1gS-HL-YWE" id="eja-yI-8dR"/>
+                <outlet property="wordLabel" destination="WQI-d6-4UX" id="e0A-xt-bpu"/>
+            </connections>
+            <point key="canvasLocation" x="-220.28985507246378" y="3.0133928571428572"/>
+        </tableViewCell>
+    </objects>
+</document>

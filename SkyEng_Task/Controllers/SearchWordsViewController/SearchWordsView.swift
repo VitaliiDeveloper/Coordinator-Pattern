@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol SearchWordsViewDelegate:AnyObject {
+  func searchWordsView(_ view:SearchWordsView, didSelectAttributes:SearchWordTableViewCellAttributes)
+}
+
 final class SearchWordsView: BaseView {
+  weak var delegate:SearchWordsViewDelegate?
+  
   let bgImageView = UIImageView(image: UIImage(named: "search-pngrepo-com")!)
   
   var tableView = UITableView()
@@ -87,6 +93,10 @@ final class SearchWordsView: BaseView {
 
 //MARK: - UITableViewDataSource, UITableViewDelegate
 extension SearchWordsView: UITableViewDataSource, UITableViewDelegate {
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    delegate?.searchWordsView(self, didSelectAttributes: self.cellAttributes[sectionTitles[indexPath.section]]![indexPath.row])
+  }
+  
   func numberOfSections(in tableView: UITableView) -> Int {
     return cellAttributes.count
   }
@@ -109,6 +119,7 @@ extension SearchWordsView: UITableViewDataSource, UITableViewDelegate {
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "SearchWordTableViewCell") as! SearchWordTableViewCell
+    cell.selectionStyle = .none
     
     let key = sectionTitles[indexPath.section]
     let attr = cellAttributes[key]![indexPath.row]
