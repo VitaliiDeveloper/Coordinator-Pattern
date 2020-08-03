@@ -21,9 +21,9 @@ First step it's install twine for multi languages application. Of cource you can
 # For installing twine need to use sudo gem install twine --user-install
 ```
 
-Also this comment you can find in twine.sh
+Also this comment you can find in **twine.sh**
 
-#### Then you need clean build this app, because you will have a lot of warning of start. Why? 
+#### Then you need clean build this app, because you will have a lot of warning on start. Why? 
 
 Simple answer - ENUM 
 
