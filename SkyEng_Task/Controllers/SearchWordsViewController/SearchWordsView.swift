@@ -40,15 +40,15 @@ final class SearchWordsView: BaseView {
     tableView.translatesAutoresizingMaskIntoConstraints = false
     
     NSLayoutConstraint.activate([
-      bgImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-      bgImageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+      bgImageView.centerYAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerYAnchor),
+      bgImageView.centerXAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerXAnchor),
       bgImageView.widthAnchor.constraint(equalToConstant: 100),
       bgImageView.heightAnchor.constraint(equalToConstant: 100),
       
-      tableView.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
-      tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
-      tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
-      tableView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10)
+      tableView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 10),
+      tableView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -10),
+      tableView.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 10),
+      tableView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -10)
     ])
   }
   

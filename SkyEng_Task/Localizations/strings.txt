@@ -5,3 +5,9 @@
   [i_want_to]
     ru = Хочу найти...
     en = Wanna find...
+  [empty_data]
+    ru = Чёт ничего нету
+    en = Searched result is empty
+  [ok]
+    ru = OK
+    en = OK

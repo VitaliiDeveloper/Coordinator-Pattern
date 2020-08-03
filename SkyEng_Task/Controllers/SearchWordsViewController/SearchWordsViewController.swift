@@ -45,6 +45,20 @@ final class SearchWordsViewController: BaseViewController {
     }
   }
   
+  func fillingContentView(models:[SearchWordDataModel]?) {
+    if (models?.count ?? 0) == 0 {
+      let alert = UIAlertController(title: Localization.main.get(key: .empty_data), message: nil, preferredStyle: .alert)
+      alert.addAction(UIAlertAction(title: Localization.main.get(key: .ok), style: .default, handler: nil))
+      
+      self.navigationController?.present(alert, animated: true)
+      return
+    }
+    
+    if let models = models {
+      self.contentView.createAttributes(from: models)
+    }
+  }
+  
   override var preferredStatusBarStyle: UIStatusBarStyle {
     return .darkContent
   }
@@ -60,10 +74,8 @@ extension SearchWordsViewController: UISearchResultsUpdating, UISearchController
     // After Invalidating would be new loading
     timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: { (timer) in
       self.searchRequest(word: word) { [unowned self] (dataModels) in
-        if let dataModels = dataModels {
-          DispatchQueue.main.async {
-            self.contentView.createAttributes(from: dataModels)
-          }
+        DispatchQueue.main.async {
+          self.fillingContentView(models: dataModels)
         }
       }
     })

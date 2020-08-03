@@ -2,6 +2,9 @@
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
+SkyEng_Task/Localizations/Languages/*
+SkyEng_Task/Localizations/LocalizationKeys.swift
+
 ## User settings
 xcuserdata/
 
