@@ -26,6 +26,7 @@ Also this comment you can find in twine.sh
 #### Then you need clean build this app, because you will have a lot of warning of start. Why? 
 
 Simple answer - ENUM 
+
 Yep, for easy using twine, was added **LocalizationsKeyGeneration.py** which generete for you localization keys =)
 
 #### And That's it :) 
