@@ -42,7 +42,18 @@
 		D3B052F124D82A4A009D899E /* WordDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3B052F024D82A4A009D899E /* WordDetailTableViewCell.xib */; };
 		D3B052F324D82C46009D899E /* WordDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B052F224D82C46009D899E /* WordDetailTableViewCell.swift */; };
 		D3B052F524D82C7A009D899E /* WordDetailTableViewCellAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B052F424D82C7A009D899E /* WordDetailTableViewCellAttributes.swift */; };
+		D3B052FD24D83365009D899E /* SkyEng_TaskUnitTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B052FC24D83365009D899E /* SkyEng_TaskUnitTesting.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D3B052FF24D83365009D899E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3B0527D24D6AE13009D899E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3B0528424D6AE13009D899E;
+			remoteInfo = SkyEng_Task;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D3B0528524D6AE13009D899E /* SkyEng_Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkyEng_Task.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,10 +94,20 @@
 		D3B052F024D82A4A009D899E /* WordDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordDetailTableViewCell.xib; sourceTree = "<group>"; };
 		D3B052F224D82C46009D899E /* WordDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDetailTableViewCell.swift; sourceTree = "<group>"; };
 		D3B052F424D82C7A009D899E /* WordDetailTableViewCellAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDetailTableViewCellAttributes.swift; sourceTree = "<group>"; };
+		D3B052FA24D83365009D899E /* SkyEng_TaskUnitTesting.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkyEng_TaskUnitTesting.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3B052FC24D83365009D899E /* SkyEng_TaskUnitTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyEng_TaskUnitTesting.swift; sourceTree = "<group>"; };
+		D3B052FE24D83365009D899E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D3B0528224D6AE13009D899E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3B052F724D83365009D899E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -100,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				D3B0528724D6AE13009D899E /* SkyEng_Task */,
+				D3B052FB24D83365009D899E /* SkyEng_TaskUnitTesting */,
 				D3B0528624D6AE13009D899E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				D3B0528524D6AE13009D899E /* SkyEng_Task.app */,
+				D3B052FA24D83365009D899E /* SkyEng_TaskUnitTesting.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -323,6 +346,15 @@
 			path = WordDetailTableViewCell;
 			sourceTree = "<group>";
 		};
+		D3B052FB24D83365009D899E /* SkyEng_TaskUnitTesting */ = {
+			isa = PBXGroup;
+			children = (
+				D3B052FC24D83365009D899E /* SkyEng_TaskUnitTesting.swift */,
+				D3B052FE24D83365009D899E /* Info.plist */,
+			);
+			path = SkyEng_TaskUnitTesting;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -344,6 +376,24 @@
 			productReference = D3B0528524D6AE13009D899E /* SkyEng_Task.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D3B052F924D83365009D899E /* SkyEng_TaskUnitTesting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3B0530124D83365009D899E /* Build configuration list for PBXNativeTarget "SkyEng_TaskUnitTesting" */;
+			buildPhases = (
+				D3B052F624D83365009D899E /* Sources */,
+				D3B052F724D83365009D899E /* Frameworks */,
+				D3B052F824D83365009D899E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3B0530024D83365009D899E /* PBXTargetDependency */,
+			);
+			name = SkyEng_TaskUnitTesting;
+			productName = SkyEng_TaskUnitTesting;
+			productReference = D3B052FA24D83365009D899E /* SkyEng_TaskUnitTesting.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -356,6 +406,10 @@
 				TargetAttributes = {
 					D3B0528424D6AE13009D899E = {
 						CreatedOnToolsVersion = 11.6;
+					};
+					D3B052F924D83365009D899E = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = D3B0528424D6AE13009D899E;
 					};
 				};
 			};
@@ -374,6 +428,7 @@
 			projectRoot = "";
 			targets = (
 				D3B0528424D6AE13009D899E /* SkyEng_Task */,
+				D3B052F924D83365009D899E /* SkyEng_TaskUnitTesting */,
 			);
 		};
 /* End PBXProject section */
@@ -392,6 +447,13 @@
 				D3B052F124D82A4A009D899E /* WordDetailTableViewCell.xib in Resources */,
 				D3B0529224D6AE15009D899E /* Assets.xcassets in Resources */,
 				D3B052CC24D6C811009D899E /* strings.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3B052F824D83365009D899E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,7 +516,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D3B052F624D83365009D899E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3B052FD24D83365009D899E /* SkyEng_TaskUnitTesting.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D3B0530024D83365009D899E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3B0528424D6AE13009D899E /* SkyEng_Task */;
+			targetProxy = D3B052FF24D83365009D899E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D3B0529324D6AE15009D899E /* LaunchScreen.storyboard */ = {
@@ -627,6 +705,46 @@
 			};
 			name = Release;
 		};
+		D3B0530224D83365009D899E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7AKVKJERBW;
+				INFOPLIST_FILE = SkyEng_TaskUnitTesting/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vitalii-lavreniuk.SkyEng-TaskUnitTesting";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SkyEng_Task.app/SkyEng_Task";
+			};
+			name = Debug;
+		};
+		D3B0530324D83365009D899E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7AKVKJERBW;
+				INFOPLIST_FILE = SkyEng_TaskUnitTesting/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vitalii-lavreniuk.SkyEng-TaskUnitTesting";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SkyEng_Task.app/SkyEng_Task";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -644,6 +762,15 @@
 			buildConfigurations = (
 				D3B0529A24D6AE15009D899E /* Debug */,
 				D3B0529B24D6AE15009D899E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3B0530124D83365009D899E /* Build configuration list for PBXNativeTarget "SkyEng_TaskUnitTesting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3B0530224D83365009D899E /* Debug */,
+				D3B0530324D83365009D899E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

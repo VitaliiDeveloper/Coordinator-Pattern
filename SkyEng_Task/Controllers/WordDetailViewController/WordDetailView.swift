@@ -80,6 +80,9 @@ final class WordDetailView: BaseView {
     }
     
     self.tableView.isHidden = false
+    
+    UIView.transition(with: tableView, duration: 0.3, options: .transitionCrossDissolve, animations: nil, completion: nil)
+    
     self.tableView.reloadData()
   }
 }

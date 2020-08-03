@@ -16,18 +16,9 @@ final class NetworkManager:NSObject, URLSessionDataDelegate {
     case wordMeaning = "/api/public/v1/meanings"
   }
   
-  lazy var session = URLSession(configuration: .default, delegate: self, delegateQueue: nil)
+  let session = URLSession(configuration: .default, delegate: nil, delegateQueue: nil)
   let scheme = "https"
   let host = "dictionary.skyeng.ru"
-  
-  @objc func didEnterBackground(_ notification:NSNotification) {
-    session = URLSession(configuration: .background(withIdentifier: "com.vl.WeatherDynamicAppIcon"), delegate: self, delegateQueue: nil)
-  }
-  
-  @objc func willEnterForeground(_ notification:NSNotification) {
-    session = URLSession(configuration: .default, delegate: self, delegateQueue: nil)
-  }
-  
   
   func search(word:String, complited:@escaping (([SearchWordDataModel]?)->())) {
     var urlComponents = URLComponents()
@@ -69,6 +60,4 @@ final class NetworkManager:NSObject, URLSessionDataDelegate {
       return nil
     }
   }
-  
-  //MARK: - URLSessionDataDelegate
 }
