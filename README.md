@@ -4,10 +4,10 @@
 ![Licence](https://img.shields.io/badge/licence-MIT-orange.svg)
 
 ## Hello and Welcome
-This Repository it's example Simple and Easy Task - ( Coordinator + MVC )
+This Repository's example Simple and Easy Task - ( Coordinator + MVC )
 
 #### How to load this project?
-First step it's install **twine** and **python3** for multi languages application. Of course you can use **iString** but this app in progress of updating for **YOU Guys**.
+The first step it's install **twine** and **python3** for multi-languages application. Of course, you can use **iString** but this app in the progress of updating for **YOU Guys**.
 
 #### How to install Twine?
 
@@ -23,12 +23,12 @@ First step it's install **twine** and **python3** for multi languages applicatio
 
 Also this comment you can find in **twine.sh**
 
-#### Then you need clean build this app, because you will have a lot of warning on start. Why? 
+#### Then you need clean build this app because you will have a lot of warning on start. Why? 
 
 Simple answer - ENUM 
 
-Yep, for easy using twine, was added **LocalizationsKeyGeneration.py** which generete for you localization keys =)
+Yep, for easy using twine, was added **LocalizationsKeyGeneration.py** which generate for you localization keys =)
 
 #### And That's it :) 
 
-### Oh no, you also need to change develop team as always:)
+### Oh no, you also need to change developer team as always:)
